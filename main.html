@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA Stats</title>
+    <link href="public/output.css" rel="stylesheet">
+    <style>
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        @media (min-width: 768px) {
+            .container {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body style="background-color: rgb(201, 0, 0); color: whitesmoke;"> 
+    <section class="main-container">
+        <div class="container">
+            <img id="nbaImage" src="public/nba.jpg" alt="nba" class="rounded object-scale-down drop-shadow-md" style="height: 250px;">
+            <section id="text" class="content-wrapper">
+                <aside class="text-section" style="width: 150px; margin: 10px;"> 
+                    <h3 class="text-2xl font-bold mb-12">Welcome to NBA API</h3> 
+                    <h6 class="text-l text-whitesmoke mb-1">Here you can get all types of information about your favorite player</h6> 
+                </aside>
+                <section id="input" class="mt-2 text-center" style="width: 300px;"> 
+                    <h6 class="text-sm text-whitesmoke mb-1">Write the name of the player and you will see his stats for all of his seasons in the league</h6> 
+                    <label for="name" class="block text-sm text-whitesmoke font-bold mb-1">Player's name:</label> 
+                    <input type="text" id="name" name="name" class="rounded bg-red-500 w-full py-2 px-4 mb-4 text-sm text-black">
+                    <button onclick="fetchData()" class="w-full bg-red-500 mb-4 text-white font-bold rounded">Submit</button>
+                </section>
+            </section>
+        </div>
+    </section>
+
+    <section class="container2"></section>
+
+    <script src="API.js"></script>
+</body>
+</html>
